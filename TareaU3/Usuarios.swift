@@ -8,9 +8,9 @@
 
 import Foundation
 
-class Usuarios
+public class Usuarios
 {
-    class var sharedInstance: Usuarios
+    public class var sharedInstance: Usuarios
     {
         struct Static{
             static var instance: Usuarios?
@@ -28,6 +28,20 @@ class Usuarios
     private var modelUpdated = false
     private var listaUsuarios = [Usuario]()
     
+    public init()
+    {
+        // Inicializa el listado de usuarios.
+        listaUsuarios.append(Usuario(id: 1, username: "usuario1", password: "usuario1", borrado: false))
+        listaUsuarios.append(Usuario(id: 2, username: "usuario2", password: "usuario2", borrado: false))
+        listaUsuarios.append(Usuario(id: 3, username: "demo10", password: "demo10", borrado: false))
+        listaUsuarios.append(Usuario(id: 4, username: "prueba", password: "prueba", borrado: false))
+        listaUsuarios.append(Usuario(id: 5, username: "svasquez", password: "svasquez", borrado: false))
+        listaUsuarios.append(Usuario(id: 6, username: "pcruz", password: "pcruz", borrado: false))
+        listaUsuarios.append(Usuario(id: 7, username: "abc", password: "abc", borrado: false))
+        listaUsuarios.append(Usuario(id: 8, username: "ztapia", password: "ztapia", borrado: false))
+        listaUsuarios.append(Usuario(id: 9, username: "demo2", password: "demo2", borrado: false))
+        listaUsuarios.append(Usuario(id: 10, username: "admin", password: "admin123", borrado: false))
+   }
     
     func getLista() -> NSArray
     {
@@ -40,6 +54,30 @@ class Usuarios
             }
         }
         return notDeleted
+    }
+    
+    // Ordenamiento de usuario con codigo burbuja
+    public func getListaOrdenada() -> NSArray
+    {
+        var usuarios = listaUsuarios
+        var total = usuarios.count
+        var contador1 : Int = 0
+        var aux : Usuario
+        while contador1 < total{
+            var contador2 : Int = 0
+            while contador2 < total  - 1{
+               if usuarios[contador2].username > usuarios[contador2 + 1].username
+                {
+                    aux = usuarios[contador2]
+                    usuarios[contador2] = usuarios[contador2 + 1]
+                    usuarios[contador2 + 1] = aux
+                }
+                contador2 = contador2 + 1
+            }
+            
+            contador1 = contador1 + 1
+        }
+        return usuarios
     }
     
     // Retorna listaUsuarios por ID

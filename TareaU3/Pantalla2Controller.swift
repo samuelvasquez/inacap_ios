@@ -11,6 +11,7 @@ import UIKit
 class Pantalla2Controller: UIViewController {
     
     @IBOutlet weak var lblNombreUsuario: UILabel!
+    @IBOutlet weak var lblListado: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,13 @@ class Pantalla2Controller: UIViewController {
         if(item != nil)
         {
             lblNombreUsuario.text = item?.username
+            
+            lblListado.text = "Listado de Usuarios ordenados: \n\n"
+            
+            for item in Usuarios.sharedInstance.getListaOrdenada()
+            {
+                lblListado.text = lblListado.text! + item.username + "\n"
+            }
         }
     }
     

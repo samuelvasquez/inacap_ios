@@ -9,7 +9,7 @@
 import Foundation
 
 // Clase para almacenar la informacion de cada usuario
-class Usuario: NSObject
+public class Usuario: NSObject
 {
     // Identificador unico
     var id: Int
@@ -21,7 +21,7 @@ class Usuario: NSObject
     var borrado: Bool
     
     // constructor
-    init(id: Int, username: String, password: String, borrado: Bool)
+    public init(id: Int, username: String, password: String, borrado: Bool)
     {
         self.id = id
         self.username = username

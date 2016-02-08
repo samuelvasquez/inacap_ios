@@ -8,6 +8,7 @@
 
 import UIKit
 import XCTest
+import TareaU3
 
 class TareaU3Tests: XCTestCase {
     
@@ -21,15 +22,35 @@ class TareaU3Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testUsuarioCorrecto() {
+        var login : Login = Login()
+        
+        login.validarLogin("usuario1", password: "usuario1")
+        
+        
+        XCTAssertEqual(login.getUsuarioEncontrado(), true, "Valida usuario encontrado")
+        XCTAssertEqual(login.getErrorEnPassword(), false, "Valida no hay error en password")
+        XCTAssertEqual(login.getUsuarioId(), 1, "Valida identificador de usuario")
+        XCTAssertEqual(login.getMensajeError(), "", "Valida mensaje de error vacio")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testUsuarioPasswordIncorrecto() {
+        var login : Login = Login()
+        
+        login.validarLogin("usuario1", password: "password_erronea")
+        
+        
+        XCTAssertEqual(login.getUsuarioEncontrado(), true, "Valida usuario encontrado")
+        XCTAssertEqual(login.getErrorEnPassword(), true, "Valida error en password")
+        XCTAssertEqual(login.getUsuarioId(), 0, "Valida identificador de usuario")
+        XCTAssertEqual(login.getMensajeError(), "No coincide password", "Valida mensaje de error")
+    }
+    
+    func testPerformanceOrdenamiento() {
+        // Prueba de perfomance odrdenamiento de lista de usuarios
         self.measureBlock() {
-            // Put the code you want to measure the time of here.
+            var objeto : Usuarios! = Usuarios()
+            objeto.getListaOrdenada()
         }
     }
     

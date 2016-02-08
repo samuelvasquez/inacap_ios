@@ -17,6 +17,7 @@
 		E82EFB141C61B8840002AB7F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB131C61B8840002AB7F /* Usuario.swift */; };
 		E82EFB161C61BA4E0002AB7F /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB151C61BA4E0002AB7F /* Usuarios.swift */; };
 		E82EFB181C61BABC0002AB7F /* UsuarioActivoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */; };
+		E8DB24171C68D65E00CDE57D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB24161C68D65E00CDE57D /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E82EFB131C61B8840002AB7F /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		E82EFB151C61BA4E0002AB7F /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 		E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioActivoId.swift; sourceTree = "<group>"; };
+		E8DB24161C68D65E00CDE57D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				E82EFB131C61B8840002AB7F /* Usuario.swift */,
 				E82EFB151C61BA4E0002AB7F /* Usuarios.swift */,
 				E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */,
+				E8DB24161C68D65E00CDE57D /* Login.swift */,
 			);
 			path = TareaU3;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8DB24171C68D65E00CDE57D /* Login.swift in Sources */,
 				E82EFB141C61B8840002AB7F /* Usuario.swift in Sources */,
 				E82EFB161C61BA4E0002AB7F /* Usuarios.swift in Sources */,
 				E82EFB121C61B3140002AB7F /* Pantalla2Controller.swift in Sources */,
