@@ -17,17 +17,19 @@ class Pantalla2Controller: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        var item = Usuarios.sharedInstance.getById(UsuarioActivoId.instance)
+        // Recupera info de usuario actual y muestra el nombre
+        let item = Usuarios.sharedInstance.getById(UsuarioActivoId.instance)
         if(item != nil)
         {
             lblNombreUsuario.text = item?.username
+        }
+        
+        // Ordena lista de usuarios y la muestra por pantalla
+        lblListado.text = "Listado de Usuarios ordenados: \n\n"
             
-            lblListado.text = "Listado de Usuarios ordenados: \n\n"
-            
-            for item in Usuarios.sharedInstance.getListaOrdenada()
-            {
-                lblListado.text = lblListado.text! + item.username + "\n"
-            }
+        for item in Usuarios.sharedInstance.getListaOrdenada()
+        {
+            lblListado.text = lblListado.text! + item.username + "\n"
         }
     }
     
@@ -35,7 +37,7 @@ class Pantalla2Controller: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
         
 }
 

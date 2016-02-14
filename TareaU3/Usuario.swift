@@ -19,13 +19,16 @@ public class Usuario: NSObject
     var password: String
     // Indicador de borrado logico
     var borrado: Bool
+    // Corresponde a usuario con TouchId registrado
+    var autenticacionPorTouchId: Bool
     
     // constructor
-    public init(id: Int, username: String, password: String, borrado: Bool)
+    public init(id: Int, username: String, password: String, borrado: Bool, autenticacionPorTouchId: Bool)
     {
         self.id = id
         self.username = username
         self.password = password
         self.borrado = borrado
+        self.autenticacionPorTouchId = autenticacionPorTouchId
     }
 }

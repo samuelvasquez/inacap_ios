@@ -31,16 +31,16 @@ public class Usuarios
     public init()
     {
         // Inicializa el listado de usuarios.
-        listaUsuarios.append(Usuario(id: 1, username: "usuario1", password: "usuario1", borrado: false))
-        listaUsuarios.append(Usuario(id: 2, username: "usuario2", password: "usuario2", borrado: false))
-        listaUsuarios.append(Usuario(id: 3, username: "demo10", password: "demo10", borrado: false))
-        listaUsuarios.append(Usuario(id: 4, username: "prueba", password: "prueba", borrado: false))
-        listaUsuarios.append(Usuario(id: 5, username: "svasquez", password: "svasquez", borrado: false))
-        listaUsuarios.append(Usuario(id: 6, username: "pcruz", password: "pcruz", borrado: false))
-        listaUsuarios.append(Usuario(id: 7, username: "abc", password: "abc", borrado: false))
-        listaUsuarios.append(Usuario(id: 8, username: "ztapia", password: "ztapia", borrado: false))
-        listaUsuarios.append(Usuario(id: 9, username: "demo2", password: "demo2", borrado: false))
-        listaUsuarios.append(Usuario(id: 10, username: "admin", password: "admin123", borrado: false))
+        listaUsuarios.append(Usuario(id: 1, username: "usuario1", password: "usuario1", borrado: false, autenticacionPorTouchId: true))
+        listaUsuarios.append(Usuario(id: 2, username: "usuario2", password: "usuario2", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 3, username: "demo10", password: "demo10", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 4, username: "prueba", password: "prueba", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 5, username: "svasquez", password: "svasquez", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 6, username: "pcruz", password: "pcruz", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 7, username: "abc", password: "abc", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 8, username: "ztapia", password: "ztapia", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 9, username: "demo2", password: "demo2", borrado: false, autenticacionPorTouchId: false))
+        listaUsuarios.append(Usuario(id: 10, username: "admin", password: "admin123", borrado: false, autenticacionPorTouchId: false))
    }
     
     func getLista() -> NSArray
@@ -60,7 +60,7 @@ public class Usuarios
     public func getListaOrdenada() -> NSArray
     {
         var usuarios = listaUsuarios
-        var total = usuarios.count
+        let total = usuarios.count
         var contador1 : Int = 0
         var aux : Usuario
         while contador1 < total{
@@ -95,6 +95,7 @@ public class Usuarios
         return nil
     }
     
+    // Marca un usuario como borrado
     func delete(index: Int)
     {
         let item = listaUsuarios[index]
@@ -102,19 +103,13 @@ public class Usuarios
         listaUsuarios[index] = item
     }
     
+    // Agregar usuario al listado
     func add(item: Usuario)
     {
         listaUsuarios.append(item)
     }
     
-    func update(original: Usuario, actualizado: Usuario)
-    {
-        if let posicion = find(listaUsuarios, original)
-        {
-            listaUsuarios[posicion] = actualizado
-            modelUpdated = true;
-        }
-    }
+    
     
     func hasChanged() -> Bool
     {

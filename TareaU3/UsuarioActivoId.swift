@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Variable estatica que guarda identificador de usuario activo
 struct UsuarioActivoId
 {
     static var instance: Int = 0

@@ -9,7 +9,7 @@
 import UIKit
 
 public class Pantalla1Controller: UIViewController {
-
+// Referencia a los controles de la pantalla
     @IBOutlet weak var txtNombreUsuario: UITextField!
     @IBOutlet weak var txtContrasena: UITextField!
     @IBOutlet weak var lblMensajeError: UILabel!
@@ -27,16 +27,20 @@ public class Pantalla1Controller: UIViewController {
     // Clic en boton Ingresar, validacion de datos 
     // Si esta todo OK, va a pantalla 2
     @IBAction func btnIngresarClic(sender: UIButton) {
-        var login : Login = Login()
+        // Instancia de la clase Login
+        let login : Login = Login()
+        // intento validar el usuario con el username y password ingresado
+        login.validarLogin(txtNombreUsuario.text!, password: txtContrasena.text!)
         
-        login.validarLogin(txtNombreUsuario.text, password: txtContrasena.text)
-        
-        // si hay un usuario correcto, se carga listado de clientes
+        // si hay un usuario correcto, se va a pantalla siguiente
         if(login.getUsuarioEncontrado() && !login.getErrorEnPassword())
         {
+            // asigno variable UsuarioActivoId al identificador del usuaro logueado
             UsuarioActivoId.instance = login.getUsuarioId()
+            // limpio los controles de username y password
             txtNombreUsuario.text = ""
             txtContrasena.text = ""
+            // redirecciono a la pantalla2
             self.performSegueWithIdentifier("irAPantalla2", sender: self)
         }
             // en caso de error, se muestra el motivo del error

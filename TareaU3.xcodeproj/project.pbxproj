@@ -17,6 +17,8 @@
 		E82EFB141C61B8840002AB7F /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB131C61B8840002AB7F /* Usuario.swift */; };
 		E82EFB161C61BA4E0002AB7F /* Usuarios.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB151C61BA4E0002AB7F /* Usuarios.swift */; };
 		E82EFB181C61BABC0002AB7F /* UsuarioActivoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */; };
+		E84988891C6A1CB900D33933 /* PantallaTouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84988881C6A1CB900D33933 /* PantallaTouchController.swift */; };
+		E849888B1C6A208400D33933 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E849888A1C6A208400D33933 /* LocalAuthentication.framework */; };
 		E8DB24171C68D65E00CDE57D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB24161C68D65E00CDE57D /* Login.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		E82EFB131C61B8840002AB7F /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		E82EFB151C61BA4E0002AB7F /* Usuarios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuarios.swift; sourceTree = "<group>"; };
 		E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioActivoId.swift; sourceTree = "<group>"; };
+		E84988881C6A1CB900D33933 /* PantallaTouchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantallaTouchController.swift; sourceTree = "<group>"; };
+		E849888A1C6A208400D33933 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		E8DB24161C68D65E00CDE57D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E849888B1C6A208400D33933 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +74,7 @@
 		E82EFAE31C61AB740002AB7F = {
 			isa = PBXGroup;
 			children = (
+				E849888A1C6A208400D33933 /* LocalAuthentication.framework */,
 				E82EFAEE1C61AB740002AB7F /* TareaU3 */,
 				E82EFB041C61AB740002AB7F /* TareaU3Tests */,
 				E82EFAED1C61AB740002AB7F /* Products */,
@@ -90,14 +96,15 @@
 				E82EFAF11C61AB740002AB7F /* AppDelegate.swift */,
 				E82EFAF81C61AB740002AB7F /* Images.xcassets */,
 				E82EFAFA1C61AB740002AB7F /* LaunchScreen.xib */,
+				E8DB24161C68D65E00CDE57D /* Login.swift */,
 				E82EFAF51C61AB740002AB7F /* Main.storyboard */,
 				E82EFAF31C61AB740002AB7F /* Pantalla1Controller.swift */,
 				E82EFB111C61B3140002AB7F /* Pantalla2Controller.swift */,
+				E84988881C6A1CB900D33933 /* PantallaTouchController.swift */,
 				E82EFAEF1C61AB740002AB7F /* Supporting Files */,
 				E82EFB131C61B8840002AB7F /* Usuario.swift */,
-				E82EFB151C61BA4E0002AB7F /* Usuarios.swift */,
 				E82EFB171C61BABC0002AB7F /* UsuarioActivoId.swift */,
-				E8DB24161C68D65E00CDE57D /* Login.swift */,
+				E82EFB151C61BA4E0002AB7F /* Usuarios.swift */,
 			);
 			path = TareaU3;
 			sourceTree = "<group>";
@@ -171,7 +178,8 @@
 		E82EFAE41C61AB740002AB7F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Samuel Vasquez";
 				TargetAttributes = {
 					E82EFAEB1C61AB740002AB7F = {
@@ -233,6 +241,7 @@
 				E82EFB121C61B3140002AB7F /* Pantalla2Controller.swift in Sources */,
 				E82EFB181C61BABC0002AB7F /* UsuarioActivoId.swift in Sources */,
 				E82EFAF41C61AB740002AB7F /* Pantalla1Controller.swift in Sources */,
+				E84988891C6A1CB900D33933 /* PantallaTouchController.swift in Sources */,
 				E82EFAF21C61AB740002AB7F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +304,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -309,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -359,6 +369,7 @@
 				INFOPLIST_FILE = TareaU3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "inacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "";
 			};
@@ -371,6 +382,7 @@
 				INFOPLIST_FILE = TareaU3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "inacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "";
 			};
@@ -390,6 +402,7 @@
 				);
 				INFOPLIST_FILE = TareaU3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "inacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TareaU3.app/TareaU3";
 			};
@@ -405,6 +418,7 @@
 				);
 				INFOPLIST_FILE = TareaU3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "inacap.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TareaU3.app/TareaU3";
 			};

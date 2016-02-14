@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zgW-dV-LcH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
+        <!--Auntenticacion por Touch-->
+        <scene sceneID="Zyr-UL-bOc">
+            <objects>
+                <viewController title="Auntenticacion por Touch" id="zgW-dV-LcH" customClass="PantallaTouchController" customModule="TareaU3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jco-g4-W83"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqY-ir-wPm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jW3-V9-4Rg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isH-Y5-Uqe">
+                                <rect key="frame" x="0.0" y="20" width="199" height="30"/>
+                                <state key="normal" title="Autenticar por Touch ID">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AutenticarClic:" destination="zgW-dV-LcH" eventType="touchUpInside" id="7wG-Yd-6GV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="1ws-kN-ORS" kind="show" identifier="irAPantalla2" id="XK1-v9-Tdu"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="irAPantalla1" id="Vie-YX-azC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaL-tU-cyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="634"/>
+        </scene>
         <!--Pantalla1 Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -86,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="867"/>
+            <point key="canvasLocation" x="556" y="1399"/>
         </scene>
         <!--Pantalla 2-->
         <scene sceneID="3ri-xH-tz6">
@@ -112,21 +145,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnV-a9-G8s">
-                                <rect key="frame" x="90" y="152" width="46" height="30"/>
-                                <state key="normal" title="Cerrar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="OkM-4G-VvO"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="\" lineBreakMode="wordWrap" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-G9-R8h">
                                 <rect key="frame" x="16" y="193" width="286" height="259"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnV-a9-G8s">
+                                <rect key="frame" x="90" y="152" width="46" height="30"/>
+                                <state key="normal" title="Cerrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zgW-dV-LcH" kind="show" id="Y7A-Hw-WYy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -138,7 +171,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tz0-Kl-71T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="867"/>
+            <point key="canvasLocation" x="1341" y="634"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XK1-v9-Tdu"/>
+    </inferredMetricsTieBreakers>
 </document>

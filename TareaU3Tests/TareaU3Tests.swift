@@ -23,7 +23,7 @@ class TareaU3Tests: XCTestCase {
     }
     
     func testUsuarioCorrecto() {
-        var login : Login = Login()
+        let login : Login = Login()
         
         login.validarLogin("usuario1", password: "usuario1")
         
@@ -35,7 +35,7 @@ class TareaU3Tests: XCTestCase {
     }
     
     func testUsuarioPasswordIncorrecto() {
-        var login : Login = Login()
+        let login : Login = Login()
         
         login.validarLogin("usuario1", password: "password_erronea")
         
@@ -49,7 +49,7 @@ class TareaU3Tests: XCTestCase {
     func testPerformanceOrdenamiento() {
         // Prueba de perfomance odrdenamiento de lista de usuarios
         self.measureBlock() {
-            var objeto : Usuarios! = Usuarios()
+            let objeto : Usuarios! = Usuarios()
             objeto.getListaOrdenada()
         }
     }
